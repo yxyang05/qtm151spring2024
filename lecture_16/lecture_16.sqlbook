@@ -36,12 +36,15 @@ panel on the left:
 
 Delete existing table
 -- SQLBook: Code
--- Active: 1698674191041@@127.0.0.1@5432@postgres
+-- Active: 1710938450479@@127.0.0.1@5432@postgres
 -- If the table already exists we can drop it:
 -- If it doesn't exist nothing happens
 -- System commands are in upper case and user defined
 -- names are in lower case
 -- Comments are written with double dashes "--" rather than hastag (#)
+
+#CAPITAL = system command
+#lower = user input
 
 DROP TABLE IF EXISTS drivers;
 -- SQLBook: Markup
@@ -52,6 +55,9 @@ Create empty table from codebook
 -- Create empty TABLE called "drivers"
 -- This example has five arguments separated by a comma
 -- that contain the "column_name" and "column_type", respectively
+
+-- table = database
+-- variable_name variable_type (characters_allowed)
 
 CREATE TABLE drivers(
     driver_id int,
@@ -68,6 +74,8 @@ Add rows to table
 -- In SQL different lines need to be separated by a semicolon ";"
 -- You write system commands in capital letters to easily distinguish
 -- column names from system commands
+
+--if run twice, creates anoter row
 
 INSERT INTO drivers  VALUES (1, 'Lewis Hamilton','British',103);
 
@@ -114,6 +122,8 @@ Extracting columns from table
 -- SELECT extracts certain COLUMNS
 -- FROM is used to indicate the source table
 
+--take driver_id and nationaly column from the table drivers
+
 SELECT driver_id, nationality FROM drivers;
 -- SQLBook: Markup
 <font size="5"> 
@@ -121,6 +131,7 @@ SELECT driver_id, nationality FROM drivers;
 Extract all columns from table
 -- SQLBook: Code
 -- The symbol "*" is a shorthand for "all variables"
+-- will end in FROM datatable
 SELECT * FROM drivers;
 -- SQLBook: Markup
 <font size = "5">
@@ -133,11 +144,13 @@ WHERE nationality = 'German';
 
 -- Evalute OR conditions
 SELECT * FROM drivers
-WHERE nationality = 'United States';
+WHERE nationality = 'United States' OR nationality = 'Colombian';
 
 -- Evaluate AND conditions
 SELECT * FROM drivers
-WHERE (driver_id = 2);
+WHERE nationality = 'German' AND driver_id = 3;
+
+--can use lowercase or uppercase (or) (AND)
 
 -- SQLBook: Markup
 <font size="5"> 
