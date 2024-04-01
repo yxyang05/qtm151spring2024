@@ -119,6 +119,7 @@ INSERT INTO drivers VALUES (6, 'Juan Pablo Montoya', 'Colombian', 6);
 
 Extracting columns from table
 -- SQLBook: Code
+-- Active: 1710938450479@@127.0.0.1@5432@postgres
 -- SELECT extracts certain COLUMNS
 -- FROM is used to indicate the source table
 
@@ -130,6 +131,7 @@ SELECT driver_id, nationality FROM drivers;
 
 Extract all columns from table
 -- SQLBook: Code
+-- Active: 1710938450479@@127.0.0.1@5432@postgres
 -- The symbol "*" is a shorthand for "all variables"
 -- will end in FROM datatable
 SELECT * FROM drivers;
@@ -157,6 +159,7 @@ WHERE nationality = 'German' AND driver_id = 3;
 
 Aggregate
 -- SQLBook: Code
+-- Active: 1710938450479@@127.0.0.1@5432@postgres
 -- To compute aggregate statistics use a statistic function,
 -- such as SUM() or AVG() 
 -- The AS is an alias which assigns a name to the aggregate statistic
@@ -242,6 +245,7 @@ HAVING SUM(victories) > 50;
 
 Subsetting **before** and **after** aggregating
 -- SQLBook: Code
+-- Active: 1710938450479@@127.0.0.1@5432@postgres
 -- HAVING is the command you use to subset *after* aggregating
 -- This differs from WHERE, which is used to subset *before* aggregating
 -- SQL differentiates the two types of subsetting
