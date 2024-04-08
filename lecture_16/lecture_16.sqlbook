@@ -194,7 +194,7 @@ ORDER BY victories DESC;
 -- The following code would NOT work because we used double quotations
 -- "Double quotations" are used to refer to column names
 SELECT * FROM drivers 
-WHERE nationality = 'German';
+WHERE nationality = "German";
 -- SQLBook: Markup
 <font size = "5">
 
